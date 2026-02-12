@@ -15,7 +15,7 @@ function Footer(){
                 <a href='https://github.com/Dubzy08' className='social-link' target='_blank'>
                     <img className='social-img' src={githubImg}></img>
                 </a>
-                <a href='https://www.linkedin.com/in/jeremydub%C3%A9/' className='social-link' target='_blank'>
+                <a href='https://www.linkedin.com/in/jeremy-dube-software-engineer' className='social-link' target='_blank'>
                     <img className='social-img' src={linkedinImg}></img>
                 </a>
                 <a href='mailto:jeremy.dube08@outlook.com' className='social-link'>
