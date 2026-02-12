@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --primary-color: #3392bb;
+    --secondary-color: #addcd4;
+    --primary-gradiant: linear-gradient(to bottom right, var(--secondary-color) 0%, var(--primary-color) 100%) border-box;
+    --border-gradiant:  linear-gradient(#1c1c1c, #1c1c1c) padding-box,
+                        linear-gradient(to bottom right, var(--secondary-color) 0%, var(--primary-color) 100%) border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+body{
+    margin: 0px;
+    background-color: #1c1c1c;
+    color: white;
+    justify-items: center;
+}
+
+p{
+    text-align: left;
+    max-width: 600px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+input{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+textarea{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-bg{
+    z-index: -1;
+}
+
+.welcome-screen{
+    height: 100vh;
+}
+
+.container{
+    max-width: 1600px
+}
+
+.card {
+    border: 1px solid #636363;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(194, 194, 194);
+    padding: 30px;
+    margin: 10px;
+    text-align: center;
+    max-width: 250px;
+    display: inline-block;
+}
+
+.card .card-image {
+    max-width: 60%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.card .card-title {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.card .card-text {
+    font-family: Arial, sans-serif;
+}
+
+.student{
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+    padding: 10px;
+    border: 1px solid rgb(70, 70, 70);
+    max-width: 400px;
+}
+
+.student p{
+    margin: 0;
+}
+
+.welcome-message{
+    font-size: 2.5em;
+    background-color: rgb(108, 250, 37);
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    margin: 10px;
+}
+
+.login-prompt{
+    font-size: 2.5em;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.section-heading{
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    width: fit-content;
+    margin-top: 95px;
+    margin-bottom: 20px;
+}
+
+.section-heading::after{
+    content: '';
+    border-bottom: 18px solid var(--primary-color);
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    left: 30px;
+    bottom: 25px;
+    z-index: -1;
+}
+
+.section-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 400px;
+}
+
+.skills .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+}
+
+.about-skills-container{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1600px){
+    .about-skills-container{
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.about .profile-icon{
+    font-size: 50;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.submit-button-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.nav-bar{
+    z-index: 1000;
+}
