@@ -18,6 +18,8 @@
     position: sticky;
     top: 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(44, 44, 44, 0.937);
     backdrop-filter: blur(8px);
 }
@@ -41,7 +43,11 @@
     max-width: 100px;
 }
 
-.lang-toggle-btn {
+.lang-toggle-container{
+    margin-left: 10px;
+}
+
+.lang-toggle-btn{
     background: transparent;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
@@ -52,7 +58,7 @@
     cursor: pointer;
 }
 
-.lang-toggle-btn:hover {
+.lang-toggle-btn:hover{
     background: var(--primary-color);
     color: white;
 }
