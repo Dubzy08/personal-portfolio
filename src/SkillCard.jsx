@@ -2,12 +2,9 @@ import './SkillCard.css'
 
 function SkillCard(props){
 
-    const filename = props.filename;
-    const filepath = './src/assets/skills/';
-
     return(
         <div className='skill-card'>
-            <img className='skill-image' src={filepath+filename}></img>
+            <img className='skill-image' src={props.filename} alt={props.title}></img>
             <div className='skill-title'>{props.title}</div>
         </div>
     );

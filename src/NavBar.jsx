@@ -1,5 +1,6 @@
 import './NavBar.css'
 import { useTranslation } from './LanguageContext';
+import logo from './assets/JD_logo_nobackground.png';
 
 function NavigationBar() {
     const { t, language, toggleLanguage } = useTranslation();
@@ -8,7 +9,7 @@ function NavigationBar() {
         <>
             <div className='nav-bar'>
                 <div>
-                    <img className='website-logo' src='./src/assets/JD_logo_nobackground.png' alt='logo'/>
+                    <img className='website-logo' src={logo} alt='logo'/>
                 </div>
                 <ul className='item-list'>
                     <li className='list-item'>

@@ -8,6 +8,17 @@ import ParticleBackground from './Particle.jsx'
 import Resume from './Resume.jsx'
 import { useTranslation } from './LanguageContext.jsx'
 
+import cppfile from './assets/skills/cpp.png'
+import csharpfile from './assets/skills/csharp.png'
+import cssfile from './assets/skills/css.png'
+import dockerfile from './assets/skills/docker.png'
+import gitfile from './assets/skills/git.png'
+import html5file from './assets/skills/html5.png'
+import javascriptfile from './assets/skills/javascript.png'
+import postgresqlfile from './assets/skills/postgresql.png'
+import pythonfile from './assets/skills/python.png'
+import reactfile from './assets/skills/react.png'
+
 function App() {
 
     const { t } = useTranslation();
@@ -27,16 +38,16 @@ function App() {
                 <section id='skills' className='section-block skills'>
                     <h2 className='section-heading'>{t.skills}</h2>
                     <div className='container'>
-                        <SkillCard title='PYTHON' filename='python.png'/>
-                        <SkillCard title='JAVASCRIPT' filename='javascript.png'/>
-                        <SkillCard title='C++' filename='cpp.png'/>
-                        <SkillCard title='REACT' filename='react.png'/>
-                        <SkillCard title='HTML' filename='html5.png'/>
-                        <SkillCard title='C#' filename='csharp.png'/>
-                        <SkillCard title='GIT' filename='git.png'/>
-                        <SkillCard title='CSS' filename='css.png'/>
-                        <SkillCard title='DOCKER' filename='docker.png'/>
-                        <SkillCard title='POSTGRESQL' filename='postgresql.png'/>
+                        <SkillCard title='PYTHON' filename={pythonfile}/>
+                        <SkillCard title='JAVASCRIPT' filename={javascriptfile}/>
+                        <SkillCard title='C++' filename={cppfile}/>
+                        <SkillCard title='REACT' filename={reactfile}/>
+                        <SkillCard title='HTML' filename={html5file}/>
+                        <SkillCard title='C#' filename={csharpfile}/>
+                        <SkillCard title='GIT' filename={gitfile}/>
+                        <SkillCard title='CSS' filename={cssfile}/>
+                        <SkillCard title='DOCKER' filename={dockerfile}/>
+                        <SkillCard title='POSTGRESQL' filename={postgresqlfile}/>
                     </div>
                     <p>{t.skillsDesc}</p>
                 </section>
