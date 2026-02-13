@@ -24,47 +24,49 @@ function App() {
     const { t } = useTranslation();
 
     return (
-        <>
-            {/* <ParticleBackground className='main-bg'/> */}
-            <NavigationBar className='nav-bar'/>
-            <div className='welcome-screen'>
-                <Home/>
-            </div>
-            <div className='about-skills-container'>
-                <section id='about' className='section-block about'>
-                    <h2 className='section-heading'>{t.about}</h2>
-                    <About/>
+        <div className='app-container'>
+            <ParticleBackground id='tsparticles'/>
+            <div className='content'>
+                <NavigationBar className='nav-bar'/>
+                <div className='welcome-screen'>
+                    <Home/>
+                </div>
+                <div className='about-skills-container'>
+                    <section id='about' className='section-block about'>
+                        <h2 className='section-heading'>{t.about}</h2>
+                        <About/>
+                    </section>
+                    <section id='skills' className='section-block skills'>
+                        <h2 className='section-heading'>{t.skills}</h2>
+                        <div className='container'>
+                            <SkillCard title='PYTHON' filename={pythonfile}/>
+                            <SkillCard title='JAVASCRIPT' filename={javascriptfile}/>
+                            <SkillCard title='C++' filename={cppfile}/>
+                            <SkillCard title='REACT' filename={reactfile}/>
+                            <SkillCard title='HTML' filename={html5file}/>
+                            <SkillCard title='C#' filename={csharpfile}/>
+                            <SkillCard title='GIT' filename={gitfile}/>
+                            <SkillCard title='CSS' filename={cssfile}/>
+                            <SkillCard title='DOCKER' filename={dockerfile}/>
+                            <SkillCard title='POSTGRESQL' filename={postgresqlfile}/>
+                        </div>
+                        <p>{t.skillsDesc}</p>
+                    </section>
+                </div>
+                <section id='projects' className='section-block projects'>
+                    <h2 className='section-heading'>{t.projects}</h2>
                 </section>
-                <section id='skills' className='section-block skills'>
-                    <h2 className='section-heading'>{t.skills}</h2>
-                    <div className='container'>
-                        <SkillCard title='PYTHON' filename={pythonfile}/>
-                        <SkillCard title='JAVASCRIPT' filename={javascriptfile}/>
-                        <SkillCard title='C++' filename={cppfile}/>
-                        <SkillCard title='REACT' filename={reactfile}/>
-                        <SkillCard title='HTML' filename={html5file}/>
-                        <SkillCard title='C#' filename={csharpfile}/>
-                        <SkillCard title='GIT' filename={gitfile}/>
-                        <SkillCard title='CSS' filename={cssfile}/>
-                        <SkillCard title='DOCKER' filename={dockerfile}/>
-                        <SkillCard title='POSTGRESQL' filename={postgresqlfile}/>
-                    </div>
-                    <p>{t.skillsDesc}</p>
+                <section id='contact' className='section-block contact'>
+                    <h2 className='section-heading'>{t.contact}</h2>
+                    <Contact/>
                 </section>
+                <section id='resume' className='section-block resume'>
+                    <h2 className='section-heading'>{t.resume}</h2>
+                    <Resume/>
+                </section>
+                <Footer/>
             </div>
-            <section id='projects' className='section-block projects'>
-                <h2 className='section-heading'>{t.projects}</h2>
-            </section>
-            <section id='contact' className='section-block contact'>
-                <h2 className='section-heading'>{t.contact}</h2>
-                <Contact/>
-            </section>
-            <section id='resume' className='section-block resume'>
-                <h2 className='section-heading'>{t.resume}</h2>
-                <Resume/>
-            </section>
-            <Footer/>
-        </>
+        </div>
     );
 }
 
