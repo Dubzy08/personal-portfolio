@@ -32,11 +32,11 @@ function App() {
     }, [])
 
     useEffect(() => {
-        const sections = document.querySelectorAll("section[id]"); // Only watch sections with IDs
+        const sections = document.querySelectorAll("section[id]");
 
         const observerOptions = {
-            root: null, // use the viewport
-            rootMargin: '-20% 0px -70% 0px', // Trigger when section is in the upper middle of the screen
+            root: null,
+            rootMargin: '-20% 0px -70% 0px',
             threshold: 0
         };
 
