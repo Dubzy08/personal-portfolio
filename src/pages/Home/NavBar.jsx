@@ -1,6 +1,6 @@
 import './NavBar.css'
 import { useTranslation } from './LanguageContext';
-import logo from './assets/JD_logo_nobackground.png';
+import logo from '/src/assets/JD_logo_nobackground_new.png';
 import { useEffect, useRef } from 'react';
 
 function NavigationBar({ activeSection, lenis }) {
@@ -27,7 +27,6 @@ function NavigationBar({ activeSection, lenis }) {
             <img className='website-logo' src={logo} alt='logo' />
             <div className='nav-selection'>
                 <nav className='nav' ref={navRef} style={{ position: 'relative' }}>
-                    {/* The Bubble */}
                     <div className="nav-active-bubble" />
                     
                     {navItems.map((id) => (

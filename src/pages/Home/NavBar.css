@@ -1,5 +1,7 @@
 @import './index.css';
 
+
+
 .nav-bar div{
     color: white;
 }
@@ -17,6 +19,7 @@
 .nav-bar{
     position: sticky;
     top: 0;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,7 +30,10 @@
 }
 
 .nav-bar .website-logo{
+    height: 60%;
+    width: auto;
     max-width: 100px;
+    margin-right: 20px;
 }
 
 .nav-bar .nav-selection{
@@ -89,4 +95,19 @@
 .lang-toggle-btn:hover{
     background: var(--primary-color);
     color: white;
+}
+
+/* Responsive nav bar padding */
+@media (min-width: 1000px) {
+    .nav-bar {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .nav-bar {
+        padding-left: 1.50rem;
+        padding-right: 1.50rem;
+    }
 }

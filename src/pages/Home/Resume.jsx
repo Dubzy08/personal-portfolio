@@ -1,6 +1,6 @@
 import './Resume.css'
-import resume_fr from '../public/Jeremy_Dube_Software_Engineer_FR.pdf';
-import resume_en from '../public/Jeremy_Dube_Software_Engineer_EN.pdf';
+import resume_fr from '/public/Jeremy_Dube_Software_Engineer_FR.pdf';
+import resume_en from '/public/Jeremy_Dube_Software_Engineer_EN.pdf';
 
 function Resume() {
 

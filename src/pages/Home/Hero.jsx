@@ -1,8 +1,8 @@
-import './Home.css'
+import './Hero.css'
 import './Animations.css'
 import { useTranslation } from './LanguageContext';
 
-function Home(){
+function Hero(){
     const { t } = useTranslation();
 
     return(
@@ -21,4 +21,4 @@ function Home(){
     );
 }
 
-export default Home
+export default Hero

@@ -1,8 +1,8 @@
 import './Footer.css'
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
-import githubImg from './assets/socials/github.png'
-import linkedinImg from './assets/socials/linkedin.png'
-import mailImg from './assets/socials/mail.png'
+import githubImg from '/src/assets/socials/github.png'
+import linkedinImg from '/src/assets/socials/linkedin.png'
+import mailImg from '/src/assets/socials/mail.png'
 
 function Footer(){
 
