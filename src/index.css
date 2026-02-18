@@ -41,6 +41,10 @@ textarea{
     font-family: 'Montserrat', sans-serif;
 }
 
+section{
+    min-height: 1000px;
+}
+
 #tsparticles{
     position: relative;
     z-index: -1;

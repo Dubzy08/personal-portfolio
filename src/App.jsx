@@ -1,54 +1,96 @@
-import Footer from './Footer.jsx'
-import NavigationBar from './NavBar.jsx'
-import SkillCard from './SkillCard.jsx'
-import About from './About.jsx'
-import Contact from './Contact.jsx'
-import Home from './Home.jsx'
-import ParticleBackground from './Particle.jsx'
-import Resume from './Resume.jsx'
-import { useTranslation } from './LanguageContext.jsx'
+import Footer from './Footer.jsx';
+import NavigationBar from './NavBar.jsx';
+import SkillCard from './SkillCard.jsx';
+import About from './About.jsx';
+import Contact from './Contact.jsx';
+import Home from './Home.jsx';
+import ParticleBackground from './Particle.jsx';
+import Resume from './Resume.jsx';
+import { useTranslation } from './LanguageContext.jsx';
+import { useEffect, useState, useRef } from 'react';
+import Lenis from 'lenis';
 
-import cppfile from './assets/skills/cpp.png'
-import csharpfile from './assets/skills/csharp.png'
-import cssfile from './assets/skills/css.png'
-import dockerfile from './assets/skills/docker.png'
-import gitfile from './assets/skills/git.png'
-import html5file from './assets/skills/html5.png'
-import javascriptfile from './assets/skills/javascript.png'
-import postgresqlfile from './assets/skills/postgresql.png'
-import pythonfile from './assets/skills/python.png'
-import reactfile from './assets/skills/react.png'
+import cppfile from './assets/skills/cpp.png';
+import csharpfile from './assets/skills/csharp.png';
+import cssfile from './assets/skills/css.png';
+import dockerfile from './assets/skills/docker.png';
+import gitfile from './assets/skills/git.png';
+import html5file from './assets/skills/html5.png';
+import javascriptfile from './assets/skills/javascript.png';
+import postgresqlfile from './assets/skills/postgresql.png';
+import pythonfile from './assets/skills/python.png';
+import reactfile from './assets/skills/react.png';
 
 function App() {
 
     const { t } = useTranslation();
+    const [activeSection, setActiveSection] = useState('home');
+    const lenisRef = useRef(null);
+
+    useEffect(() => {
+        lenisRef.current = new Lenis();
+        
+        function raf(time) {
+            lenisRef.current?.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        return () => {
+            lenisRef.current?.destroy();
+        };
+    }, [])
+
+    useEffect(() => {
+        const sections = document.querySelectorAll("section[id]"); // Only watch sections with IDs
+
+        const observerOptions = {
+            root: null, // use the viewport
+            rootMargin: '-20% 0px -70% 0px', // Trigger when section is in the upper middle of the screen
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActiveSection(entry.target.id);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <div className='app-container'>
-            <ParticleBackground id='tsparticles'/>
+            <ParticleBackground id='tsparticles' />
             <div className='content'>
-                <NavigationBar className='nav-bar'/>
-                <div className='welcome-screen'>
-                    <Home/>
-                </div>
+                <NavigationBar activeSection={activeSection} lenis={lenisRef.current} className='nav-bar' />
+                <section id='home'>
+                    <div className='welcome-screen'>
+                        <Home />
+                    </div>
+                </section>
                 <div className='about-skills-container'>
                     <section id='about' className='section-block about'>
                         <h2 className='section-heading'>{t.about}</h2>
-                        <About/>
+                        <About />
                     </section>
                     <section id='skills' className='section-block skills'>
                         <h2 className='section-heading'>{t.skills}</h2>
                         <div className='container'>
-                            <SkillCard title='PYTHON' filename={pythonfile}/>
-                            <SkillCard title='JAVASCRIPT' filename={javascriptfile}/>
-                            <SkillCard title='C++' filename={cppfile}/>
-                            <SkillCard title='REACT' filename={reactfile}/>
-                            <SkillCard title='HTML' filename={html5file}/>
-                            <SkillCard title='C#' filename={csharpfile}/>
-                            <SkillCard title='GIT' filename={gitfile}/>
-                            <SkillCard title='CSS' filename={cssfile}/>
-                            <SkillCard title='DOCKER' filename={dockerfile}/>
-                            <SkillCard title='POSTGRESQL' filename={postgresqlfile}/>
+                            <SkillCard title='PYTHON' filename={pythonfile} />
+                            <SkillCard title='JAVASCRIPT' filename={javascriptfile} />
+                            <SkillCard title='C++' filename={cppfile} />
+                            <SkillCard title='REACT' filename={reactfile} />
+                            <SkillCard title='HTML' filename={html5file} />
+                            <SkillCard title='C#' filename={csharpfile} />
+                            <SkillCard title='GIT' filename={gitfile} />
+                            <SkillCard title='CSS' filename={cssfile} />
+                            <SkillCard title='DOCKER' filename={dockerfile} />
+                            <SkillCard title='POSTGRESQL' filename={postgresqlfile} />
                         </div>
                         <p>{t.skillsDesc}</p>
                     </section>
@@ -58,13 +100,13 @@ function App() {
                 </section>
                 <section id='contact' className='section-block contact'>
                     <h2 className='section-heading'>{t.contact}</h2>
-                    <Contact/>
+                    <Contact />
                 </section>
                 <section id='resume' className='section-block resume'>
                     <h2 className='section-heading'>{t.resume}</h2>
-                    <Resume/>
+                    <Resume />
                 </section>
-                <Footer/>
+                <Footer />
             </div>
         </div>
     );
