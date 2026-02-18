@@ -9,17 +9,7 @@ import Resume from './Resume.jsx';
 import { useTranslation } from './LanguageContext.jsx';
 import { useEffect, useState, useRef } from 'react';
 import Lenis from 'lenis';
-
-import cppfile from '/src/assets/skills/cpp.png';
-import csharpfile from '/src/assets/skills/csharp.png';
-import cssfile from '/src/assets/skills/css.png';
-import dockerfile from '/src/assets/skills/docker.png';
-import gitfile from '/src/assets/skills/git.png';
-import html5file from '/src/assets/skills/html5.png';
-import javascriptfile from '/src/assets/skills/javascript.png';
-import postgresqlfile from '/src/assets/skills/postgresql.png';
-import pythonfile from '/src/assets/skills/python.png';
-import reactfile from '/src/assets/skills/react.png';
+import { SkillIcons } from '../../assets/skills/index.jsx';
 
 function App() {
 
@@ -81,16 +71,16 @@ function App() {
                     <section id='skills' className='section-block skills'>
                         <h2 className='section-heading'>{t.skills}</h2>
                         <div className='container'>
-                            <SkillCard title='PYTHON' filename={pythonfile} />
-                            <SkillCard title='JAVASCRIPT' filename={javascriptfile} />
-                            <SkillCard title='C++' filename={cppfile} />
-                            <SkillCard title='REACT' filename={reactfile} />
-                            <SkillCard title='HTML' filename={html5file} />
-                            <SkillCard title='C#' filename={csharpfile} />
-                            <SkillCard title='GIT' filename={gitfile} />
-                            <SkillCard title='CSS' filename={cssfile} />
-                            <SkillCard title='DOCKER' filename={dockerfile} />
-                            <SkillCard title='POSTGRESQL' filename={postgresqlfile} />
+                            <SkillCard title='PYTHON' filename={SkillIcons.python} />
+                            <SkillCard title='JAVASCRIPT' filename={SkillIcons.javascript} />
+                            <SkillCard title='C++' filename={SkillIcons.cpp} />
+                            <SkillCard title='REACT' filename={SkillIcons.react} />
+                            <SkillCard title='HTML' filename={SkillIcons.html} />
+                            <SkillCard title='C#' filename={SkillIcons.csharp} />
+                            <SkillCard title='GIT' filename={SkillIcons.git} />
+                            <SkillCard title='CSS' filename={SkillIcons.css} />
+                            <SkillCard title='DOCKER' filename={SkillIcons.docker} />
+                            <SkillCard title='POSTGRESQL' filename={SkillIcons.postgresql} />
                         </div>
                         <p>{t.skillsDesc}</p>
                     </section>
