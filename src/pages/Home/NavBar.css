@@ -1,0 +1,113 @@
+@import './index.css';
+
+
+
+.nav-bar div{
+    color: white;
+}
+
+.nav-bar a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar a:hover{
+    color: var(--primary-color);
+    text-decoration-line: underline;
+}
+
+.nav-bar{
+    position: sticky;
+    top: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(44, 44, 44, 0.937);
+    backdrop-filter: blur(8px);
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.nav-bar .website-logo{
+    height: 60%;
+    width: auto;
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.nav-bar .nav-selection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+}
+
+.nav-link {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.nav-link.active {
+    color: black;
+}
+
+.nav-link.active:hover {
+    color: white;
+}
+
+.nav-active-bubble {
+    position: absolute;
+    left: var(--left, 0);
+    width: var(--width, 0);
+    
+    height: 80%;
+    background: var(--primary-color, white);
+    border-radius: 25px;
+    z-index: 1;
+    
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lang-toggle-btn{
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin-left: 16px;
+}
+
+.lang-toggle-btn:hover{
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Responsive nav bar padding */
+@media (min-width: 1000px) {
+    .nav-bar {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .nav-bar {
+        padding-left: 1.50rem;
+        padding-right: 1.50rem;
+    }
+}

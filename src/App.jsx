@@ -1,71 +1,17 @@
-import Footer from './Footer.jsx'
-import NavigationBar from './NavBar.jsx'
-import SkillCard from './SkillCard.jsx'
-import About from './About.jsx'
-import Contact from './Contact.jsx'
-import Home from './Home.jsx'
-import ParticleBackground from './Particle.jsx'
-import Resume from './Resume.jsx'
-import { useTranslation } from './LanguageContext.jsx'
-
-import cppfile from './assets/skills/cpp.png'
-import csharpfile from './assets/skills/csharp.png'
-import cssfile from './assets/skills/css.png'
-import dockerfile from './assets/skills/docker.png'
-import gitfile from './assets/skills/git.png'
-import html5file from './assets/skills/html5.png'
-import javascriptfile from './assets/skills/javascript.png'
-import postgresqlfile from './assets/skills/postgresql.png'
-import pythonfile from './assets/skills/python.png'
-import reactfile from './assets/skills/react.png'
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home/HomePage';
 
 function App() {
-
-    const { t } = useTranslation();
-
     return (
         <>
-            {/* <ParticleBackground className='main-bg'/> */}
-            <NavigationBar className='nav-bar'/>
-            <div className='welcome-screen'>
-                <Home/>
-            </div>
-            <div className='about-skills-container'>
-                <section id='about' className='section-block about'>
-                    <h2 className='section-heading'>{t.about}</h2>
-                    <About/>
-                </section>
-                <section id='skills' className='section-block skills'>
-                    <h2 className='section-heading'>{t.skills}</h2>
-                    <div className='container'>
-                        <SkillCard title='PYTHON' filename={pythonfile}/>
-                        <SkillCard title='JAVASCRIPT' filename={javascriptfile}/>
-                        <SkillCard title='C++' filename={cppfile}/>
-                        <SkillCard title='REACT' filename={reactfile}/>
-                        <SkillCard title='HTML' filename={html5file}/>
-                        <SkillCard title='C#' filename={csharpfile}/>
-                        <SkillCard title='GIT' filename={gitfile}/>
-                        <SkillCard title='CSS' filename={cssfile}/>
-                        <SkillCard title='DOCKER' filename={dockerfile}/>
-                        <SkillCard title='POSTGRESQL' filename={postgresqlfile}/>
-                    </div>
-                    <p>{t.skillsDesc}</p>
-                </section>
-            </div>
-            <section id='projects' className='section-block projects'>
-                <h2 className='section-heading'>{t.projects}</h2>
-            </section>
-            <section id='contact' className='section-block contact'>
-                <h2 className='section-heading'>{t.contact}</h2>
-                <Contact/>
-            </section>
-            <section id='resume' className='section-block resume'>
-                <h2 className='section-heading'>{t.resume}</h2>
-                <Resume/>
-            </section>
-            <Footer/>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Home></Home>}></Route>
+                </Routes>
+            </BrowserRouter>
         </>
     );
 }
 
-export default App
+export default App;

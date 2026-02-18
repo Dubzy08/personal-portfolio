@@ -25,7 +25,7 @@ const ParticlesBackground = () => {
     },
     fpsLimit: 120,
     particles: {
-      color: { value: "#96e1d3" }, // Using your --secondary-color
+      color: { value: ["#96e1d3", "#c2ac5c"]}, // Using your --secondary-color
       move: {
         enable: true,
         speed: 1,
