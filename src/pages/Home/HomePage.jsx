@@ -9,9 +9,8 @@ import ParticleBackground from './Particle.jsx';
 import Resume from './Resume.jsx';
 import { useTranslation } from './LanguageContext.jsx';
 import { useEffect, useState, useRef } from 'react';
-import Lenis from 'lenis';
 import { SkillIcons } from '../../assets/skills/index.jsx';
-import { Grid } from '@mui/material';
+import { Projects } from '../../assets/projects/projects.jsx';
 
 function Home({lenis}) {
 
@@ -42,7 +41,7 @@ function Home({lenis}) {
 
     return (
         <div className='app-container'>
-            
+            <ParticleBackground />
             <div className='content'>
                 <NavigationBar activeSection={activeSection} lenis={lenis} className='nav-bar' />
                 <section id='home'>
@@ -75,11 +74,11 @@ function Home({lenis}) {
                 <section id='projects' className='section-block projects'>
                     <h2 className='section-heading'>{t.projects}</h2>
                     <p>{t.projectPar}</p>
-                    <Grid>
-                        <ProjectCard/>
-                        <ProjectCard/>
-                        <ProjectCard/>
-                    </Grid>
+                    <div className='project-card-container container'>
+                        {Projects.map((project) =>(
+                            <ProjectCard key={project.id} {...project}/>
+                        ))}
+                    </div>
                 </section>
                 <section id='contact' className='section-block contact'>
                     <h2 className='section-heading'>{t.contact}</h2>

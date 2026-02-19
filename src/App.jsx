@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/HomePage';
 import Lenis from 'lenis';
+import './App.css';
 
 function App() {
 
