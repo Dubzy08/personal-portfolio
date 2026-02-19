@@ -9,12 +9,16 @@ function NavigationBar({ activeSection, lenis }) {
     const navRef = useRef(null);
 
     useEffect(() => {
-        const activeEl = navRef.current?.querySelector('.active');
-        if (activeEl) {
-            const { offsetLeft, offsetWidth } = activeEl;
-            navRef.current.style.setProperty('--left', `${offsetLeft}px`);
-            navRef.current.style.setProperty('--width', `${offsetWidth}px`);
+        const updateBubble = () =>{
+            const activeEl = navRef.current?.querySelector('.active');
+            if (activeEl) {
+                const { offsetLeft, offsetWidth } = activeEl;
+                navRef.current.style.setProperty('--left', `${offsetLeft}px`);
+                navRef.current.style.setProperty('--width', `${offsetWidth}px`);
+            }
         }
+
+        updateBubble();
     }, [activeSection, t]);
 
     const handleNavClick = (e, id) => {

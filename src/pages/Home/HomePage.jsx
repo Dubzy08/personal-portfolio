@@ -1,6 +1,7 @@
 import Footer from './Footer.jsx';
 import NavigationBar from './NavBar.jsx';
 import SkillCard from './SkillCard.jsx';
+import ProjectCard from './ProjectCard.jsx'
 import About from './About.jsx';
 import Contact from './Contact.jsx';
 import Hero from './Hero.jsx';
@@ -10,26 +11,12 @@ import { useTranslation } from './LanguageContext.jsx';
 import { useEffect, useState, useRef } from 'react';
 import Lenis from 'lenis';
 import { SkillIcons } from '../../assets/skills/index.jsx';
+import { Grid } from '@mui/material';
 
-function App() {
+function Home({lenis}) {
 
     const { t } = useTranslation();
     const [activeSection, setActiveSection] = useState('home');
-    const lenisRef = useRef(null);
-
-    useEffect(() => {
-        lenisRef.current = new Lenis();
-        
-        function raf(time) {
-            lenisRef.current?.raf(time);
-            requestAnimationFrame(raf);
-        }
-        requestAnimationFrame(raf);
-
-        return () => {
-            lenisRef.current?.destroy();
-        };
-    }, [])
 
     useEffect(() => {
         const sections = document.querySelectorAll("section[id]");
@@ -55,9 +42,9 @@ function App() {
 
     return (
         <div className='app-container'>
-            <ParticleBackground id='tsparticles' />
+            
             <div className='content'>
-                <NavigationBar activeSection={activeSection} lenis={lenisRef.current} className='nav-bar' />
+                <NavigationBar activeSection={activeSection} lenis={lenis} className='nav-bar' />
                 <section id='home'>
                     <div className='welcome-screen'>
                         <Hero />
@@ -87,6 +74,12 @@ function App() {
                 </div>
                 <section id='projects' className='section-block projects'>
                     <h2 className='section-heading'>{t.projects}</h2>
+                    <p>{t.projectPar}</p>
+                    <Grid>
+                        <ProjectCard/>
+                        <ProjectCard/>
+                        <ProjectCard/>
+                    </Grid>
                 </section>
                 <section id='contact' className='section-block contact'>
                     <h2 className='section-heading'>{t.contact}</h2>
@@ -102,4 +95,4 @@ function App() {
     );
 }
 
-export default App
+export default Home

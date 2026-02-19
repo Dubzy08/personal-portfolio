@@ -16,6 +16,7 @@ export const translations = {
         aboutDesc: 'I am a Bachelor of Electrical Engineering who has spent the last several years developing his skills of software development. While my foundation is in engineering principles, my passion lies in building high-performance, interactive full-stack applications. I thrive in fast-paced environments that challenge me to grow, staying "on my toes" by constantly adopting new technologies. When I\'m not at my desk, you\'ll find me on the field playing team sports, practicing guitar, or exploring a good book.',
         skillsDesc: "From designing intuitive user interfaces in React to architecting complex data relations in PostgreSQL, I utilize a diverse set of modern languages and tools to bring digital solutions to life.",
         contactText: "Have any questions or want to get to know me better? Send me your contact infromation and I will get back to you as soon as possible.",
+        projectPar: "A selection of high-impact digital solutions, built with focus on scalability, performance, and user experience.",
     },
     fr: {
         home: "Accueil",
@@ -32,6 +33,7 @@ export const translations = {
         submit: "Envoyer",
         aboutDesc: "Titulaire d'un baccalauréat en génie électrique, j'ai consacré les dernières années à perfectionner mes compétences en développement logiciel. Bien que mes bases reposent sur les principes de l'ingénierie, ma passion réside dans la création d'applications full-stack interactives et performantes. Je m'épanouis dans des environnements dynamiques qui me poussent à évoluer et à rester à l'affût des nouvelles technologies. Quand je ne suis pas devant mon bureau, vous me trouverez sur un terrain de sport, en train de jouer de la guitare ou plongé dans un bon livre.",
         skillsDesc: "De la conception d'interfaces utilisateur intuitives avec React à l'architecture de relations de données complexes dans PostgreSQL, j'utilise un ensemble diversifié de langages et d'outils modernes pour donner vie à des solutions numériques.",
-        contactText: "Vous avez des questions ou souhaitez faire ma connaissance ? Laissez-moi vos coordonnées et je vous recontacterai dans les plus brefs délais."
+        contactText: "Vous avez des questions ou souhaitez faire ma connaissance ? Laissez-moi vos coordonnées et je vous recontacterai dans les plus brefs délais.",
+        projectPar: "Une sélection de projets ayant un grand impact, conçus avec un accent sur la performance et l'expérience utilisateur.",
     }
 }
