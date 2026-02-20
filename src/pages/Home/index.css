@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root{
-    --primary-color: #3392bb;
-    --secondary-color: #addcd4;
+    --primary-color: rgb(51, 146, 187);
+    --secondary-color: rgb(173, 220, 212);
     --primary-gradient: linear-gradient(to bottom right, var(--secondary-color) 0%, var(--primary-color) 100%) border-box;
     --border-gradient:  linear-gradient(#1c1c1c, #1c1c1c) padding-box,
                         linear-gradient(to bottom right, var(--secondary-color) 0%, var(--primary-color) 100%) border-box;
+    --primary-font: 'Montserrat', sans-serif;
 }
 
 html{
     scroll-behavior: smooth;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--primary-font);
     font-size: 22px;
     font-weight: 300;
+    color: white;
 }
 
 body{
@@ -188,4 +190,5 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 12px;
+    align-items: stretch;
 }

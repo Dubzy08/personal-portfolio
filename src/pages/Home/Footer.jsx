@@ -22,7 +22,7 @@ function Footer(){
                     <img className='social-img' src={mailImg}></img>
                 </a>
             </div>
-            <p className='copyright-text'>&copy; 2026 J.Dube | Software & Web Engineer</p>
+            <p className='copyright-text'>&copy; 2026 J.Dube | Software & Web Developer. All rights reserved.</p>
         </footer>
     );
 }

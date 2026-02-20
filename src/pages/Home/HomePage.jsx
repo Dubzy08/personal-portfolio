@@ -75,7 +75,7 @@ function Home({lenis}) {
                     <h2 className='section-heading'>{t.projects}</h2>
                     <p>{t.projectPar}</p>
                     <div className='project-card-container container'>
-                        {Projects.map((project) =>(
+                        {Projects.slice(0, 3).map((project) =>(
                             <ProjectCard key={project.id} {...project}/>
                         ))}
                     </div>

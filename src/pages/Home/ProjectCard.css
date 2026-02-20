@@ -1,13 +1,35 @@
+@import './index.css';
 
 .project-card{
-    height: fit-content;
+    display: flex;
+    flex-direction: column;
     flex: 1;
     margin: 0.75rem;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0);
     border: 1px solid rgba(139, 139, 139, 0.448);
     border-radius: 20px;
     overflow: hidden;
     min-width: 300px;
+    transition: all 0.3s ease;
+    &:hover{
+        box-shadow: 0 0 32px var(--primary-color);
+        border-color: var(--primary-color);
+    }
+}
+
+.project-card .project-content{
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.project-card .project-info{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .project-card .project-image{
@@ -20,13 +42,12 @@
 }
 
 .project-card .project-title{
-    width: 100%;
-    max-width: 600px;
+    font-weight: 800;
 }
 
 .project-card .project-desc{
-    width: 100%;
-    max-width: 600px;
+    font-size: 16px;
+    text-align: justify;
 }
 
 .project-card .project-skills{
@@ -34,4 +55,52 @@
     flex-wrap: wrap;
     gap: 4px;
     width: 100%;
+}
+
+.project-card .project-skills .skill-tag{
+    font-size: 16px;
+    margin-right: 4px;
+    padding: 4px 12px;
+    border: 1px solid rgba(139, 139, 139, 0.448);
+    border-radius: 12px;
+}
+
+.project-card .project-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.project-card a:hover{
+    cursor: pointer;
+}
+
+.project-card .info-link{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgba(139, 139, 139, 0.448);
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 8px;
+    font-size: 20px;
+    gap: 8px;
+    min-width: fit-content;
+    transition: all 0.5s ease;
+}
+
+.project-links .live-demo{
+    &:hover{
+        background-color: var(--primary-color);
+    }
+}
+
+.project-links .source-code{
+    &:hover{
+        border-color: var(--primary-color);
+        background-color: color-mix(in srgb, var(--primary-color), transparent 72%);    }
 }
