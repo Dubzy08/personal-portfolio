@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100%;
+    height: calc(100% - 80px);
     gap: min(10px, 10vw)
 }
 
