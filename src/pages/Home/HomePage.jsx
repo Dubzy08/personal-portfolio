@@ -9,8 +9,8 @@ import ParticleBackground from './Particle.jsx';
 import Resume from './Resume.jsx';
 import { useTranslation } from './LanguageContext.jsx';
 import { useEffect, useState, useRef } from 'react';
-import { SkillIcons } from '../../assets/skills/index.jsx';
-import { Projects } from '../../assets/projects/projects.jsx';
+import { SkillIcons } from '../../assets/skills/index.js';
+import { Projects } from '../../assets/projects/projects.js';
 
 function Home({lenis}) {
 
@@ -51,11 +51,11 @@ function Home({lenis}) {
                 </section>
                 <div className='about-skills-container'>
                     <section id='about' className='section-block about'>
-                        <h2 className='section-heading'>{t.about}</h2>
+                        <h1 className='section-heading'>{t.about}</h1>
                         <About />
                     </section>
                     <section id='skills' className='section-block skills'>
-                        <h2 className='section-heading'>{t.skills}</h2>
+                        <h1 className='section-heading'>{t.skills}</h1>
                         <div className='container'>
                             <SkillCard title='PYTHON' filename={SkillIcons.python} />
                             <SkillCard title='JAVASCRIPT' filename={SkillIcons.javascript} />
@@ -72,7 +72,7 @@ function Home({lenis}) {
                     </section>
                 </div>
                 <section id='projects' className='section-block projects'>
-                    <h2 className='section-heading'>{t.projects}</h2>
+                    <h1 className='section-heading'>{t.projects}</h1>
                     <p>{t.projectPar}</p>
                     <div className='project-card-container container'>
                         {Projects.slice(0, 3).map((project) =>(
@@ -81,11 +81,11 @@ function Home({lenis}) {
                     </div>
                 </section>
                 <section id='contact' className='section-block contact'>
-                    <h2 className='section-heading'>{t.contact}</h2>
+                    <h1 className='section-heading'>{t.contact}</h1>
                     <Contact />
                 </section>
                 <section id='resume' className='section-block resume'>
-                    <h2 className='section-heading'>{t.resume}</h2>
+                    <h1 className='section-heading'>{t.resume}</h1>
                     <Resume />
                 </section>
                 <Footer />

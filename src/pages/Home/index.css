@@ -44,7 +44,7 @@ textarea{
 }
 
 section{
-    min-height: 700px;
+    min-height: 900px;
 }
 
 #tsparticles{
@@ -63,45 +63,6 @@ section{
 
 .container{
     max-width: 1600px
-}
-
-.card {
-    border: 1px solid #636363;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px rgb(194, 194, 194);
-    padding: 30px;
-    margin: 10px;
-    text-align: center;
-    max-width: 250px;
-    display: inline-block;
-}
-
-.card .card-image {
-    max-width: 60%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.card .card-title {
-    font-family: Arial, sans-serif;
-    margin: 0;
-}
-
-.card .card-text {
-    font-family: Arial, sans-serif;
-}
-
-.student{
-    font-family: Arial, sans-serif;
-    font-size: 2em;
-    padding: 10px;
-    border: 1px solid rgb(70, 70, 70);
-    max-width: 400px;
-}
-
-.student p{
-    margin: 0;
 }
 
 .welcome-message{
@@ -124,9 +85,6 @@ section{
 
 .section-heading{
     font-family: 'Abril Fatface', sans-serif;
-    font-size: 60px;
-    text-align: center;
-    width: fit-content;
     margin-top: 95px;
     margin-bottom: 20px;
 }
