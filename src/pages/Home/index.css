@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root{
     --primary-color: rgb(51, 146, 187);
-    --secondary-color: rgb(173, 220, 212);
+    --secondary-color: rgb(112, 206, 246);
+    --accent-color: rgb(156, 225, 255);
     --primary-gradient: linear-gradient(to bottom right, var(--secondary-color) 0%, var(--primary-color) 100%) border-box;
     --border-gradient:  linear-gradient(#1c1c1c, #1c1c1c) padding-box,
                         linear-gradient(to bottom right, var(--secondary-color) 0%, var(--primary-color) 100%) border-box;
