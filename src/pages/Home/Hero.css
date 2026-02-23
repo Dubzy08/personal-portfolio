@@ -1,26 +1,27 @@
 @import 'index.css';
 
-.page-header{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+@media (max-width: 950px) {
+    .main-heading{
+        flex-direction: column !important;
+    }
 }
 
 .main-heading{
-    font-size: 60px;
+    font-size: clamp(28px, 4.5vw, 60px);
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: fit-content;
+    height: calc(100% - 80px);
+    gap: min(10px, 10vw)
 }
 
 .main-heading-text{
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: fit-content;
 }
 
 .main-heading p{
@@ -31,7 +32,7 @@
     position: relative;
     display: inline-block;
     color: var(--primary-color);
-    font-size: 40px;
+    font-size: clamp(20px, 3vw, 40px);
     font-weight: 500;
     text-align: center;
     text-justify: center;
@@ -39,8 +40,8 @@
     border-radius: 5px;
     width: fit-content;
     height: fit-content;
-    margin: 30px;
-    margin-top: 40px;
+    margin: clamp(15px, 2vw, 30px);
+    margin-top: clamp(20px, 3vw, 40px);
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;

@@ -3,12 +3,19 @@ import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp
 import githubImg from '/src/assets/socials/github.png'
 import linkedinImg from '/src/assets/socials/linkedin.png'
 import mailImg from '/src/assets/socials/mail.png'
+import { useLenis } from '../../LenisContext';
 
 function Footer(){
 
+    const lenis = useLenis();
+
+    const scrollToTop = () => {
+        lenis?.scrollTo(0);
+    }
+
     return (
         <footer>
-            <a href='#home' className='home-button'>
+            <a onClick={scrollToTop} className='home-button'>
                 <KeyboardDoubleArrowUpIcon/>
             </a>
             <div className='socials'>
@@ -22,7 +29,7 @@ function Footer(){
                     <img className='social-img' src={mailImg}></img>
                 </a>
             </div>
-            <p className='copyright-text'>&copy; 2026 J.Dube | Software & Web Engineer</p>
+            <p className='copyright-text'>&copy; 2026 J.Dube | Software & Web Developer. All rights reserved.</p>
         </footer>
     );
 }
