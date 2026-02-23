@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/HomePage';
+import { LenisContext } from './LenisContext';
 import Lenis from 'lenis';
 import './App.css';
 
@@ -30,11 +31,13 @@ function App() {
 
     return (
         <>
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={<Home lenis={lenis}/>}></Route>
-                </Routes>
-            </BrowserRouter>
+            <LenisContext.Provider value={lenis}>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path='/' element={<Home />}></Route>
+                    </Routes>
+                </BrowserRouter>
+            </LenisContext.Provider>
         </>
     );
 }

@@ -1,12 +1,38 @@
 import './NavBar.css'
 import { useTranslation } from './LanguageContext';
 import logo from '/src/assets/JD_logo_nobackground_new.png';
-import { useEffect, useRef } from 'react';
+import { useLenis } from '../../LenisContext';
+import { useState, useEffect, useRef } from 'react';
 
-function NavigationBar({ activeSection, lenis }) {
+function NavigationBar() {
     const { t, language, toggleLanguage } = useTranslation();
     const navItems = ['home', 'about', 'skills', 'projects', 'contact', 'resume'];
     const navRef = useRef(null);
+    const lenis = useLenis();
+
+    const [activeSection, setActiveSection] = useState('home');
+
+    useEffect(() => {
+        const sections = document.querySelectorAll("section[id]");
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -70% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActiveSection(entry.target.id);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, []);
 
     useEffect(() => {
         const updateBubble = () =>{
@@ -23,7 +49,7 @@ function NavigationBar({ activeSection, lenis }) {
 
     const handleNavClick = (e, id) => {
         e.preventDefault();
-        if (lenis) lenis.scrollTo(id, { offset: 0 });
+        lenis?.scrollTo(id, { offset: 0 });
     };
 
     return (
