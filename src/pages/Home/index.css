@@ -16,6 +16,8 @@ html{
     font-size: 22px;
     font-weight: 300;
     color: white;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body{
