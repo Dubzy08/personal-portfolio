@@ -1,6 +1,6 @@
 import Footer from './Footer.jsx';
 import NavigationBar from './NavBar.jsx';
-import SkillCard from './SkillCard.jsx';
+import SkillSection from './SkillSection.jsx';
 import ProjectCard from './ProjectCard.jsx'
 import About from './About.jsx';
 import Contact from './Contact.jsx';
@@ -9,7 +9,6 @@ import ParticleBackground from './Particle.jsx';
 import Resume from './Resume.jsx';
 import { useTranslation } from './LanguageContext.jsx';
 import { useEffect, useState, useRef } from 'react';
-import { SkillIcons } from '../../assets/skills/index.js';
 import { Projects } from '../../assets/projects/projects.js';
 
 function Home() {
@@ -22,9 +21,7 @@ function Home() {
             <NavigationBar className='nav-bar' />
             <div className='content container'>
                 <section id='home'>
-                    <div className='welcome-screen'>
-                        <Hero />
-                    </div>
+                    <Hero />
                 </section>
                 <section id='about' className='section-block about'>
                     <h1 className='section-heading'>{t.about}</h1>
@@ -32,18 +29,7 @@ function Home() {
                 </section>
                 <section id='skills' className='section-block skills'>
                     <h1 className='section-heading'>{t.skills}</h1>
-                    <div>
-                        <SkillCard title='PYTHON' filename={SkillIcons.python} />
-                        <SkillCard title='JAVASCRIPT' filename={SkillIcons.javascript} />
-                        <SkillCard title='C++' filename={SkillIcons.cpp} />
-                        <SkillCard title='REACT' filename={SkillIcons.react} />
-                        <SkillCard title='HTML' filename={SkillIcons.html} />
-                        <SkillCard title='C#' filename={SkillIcons.csharp} />
-                        <SkillCard title='GIT' filename={SkillIcons.git} />
-                        <SkillCard title='CSS' filename={SkillIcons.css} />
-                        <SkillCard title='DOCKER' filename={SkillIcons.docker} />
-                        <SkillCard title='POSTGRESQL' filename={SkillIcons.postgresql} />
-                    </div>
+                    <SkillSection />
                     <p>{t.skillsDesc}</p>
                 </section>
                 <section id='projects' className='section-block projects'>
@@ -63,8 +49,8 @@ function Home() {
                     <h1 className='section-heading'>{t.resume}</h1>
                     <Resume />
                 </section>
-                <Footer />
             </div>
+            <Footer />
         </div>
     );
 }

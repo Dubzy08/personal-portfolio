@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: calc(100% - 80px);
+    height: calc(100dvh - 80px);
     gap: min(40px, 10vw)
 }
 
@@ -22,6 +22,12 @@
     flex-direction: column;
     align-items: center;
     min-width: fit-content;
+    font-size: var(--font-size-medium);
+}
+
+.main-heading-text p
+.main-heading-text span{
+    font-size: inherit;
 }
 
 .main-heading p{
@@ -56,4 +62,5 @@
 
 .main-heading p{
     margin: 0px;
+    font-size: inherit;
 }

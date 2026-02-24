@@ -86,7 +86,7 @@ export default function TiltCard() {
               <span>
                 &nbsp;&nbsp;<span className="tilt-prop">focus</span>
                 <span className="tilt-op">: </span>
-                <span className="tilt-str">'Fullstack Mastery'</span>
+                <span className="tilt-str">'Fullstack'</span>
                 <span className="tilt-op">,</span>
               </span>
             </div>
@@ -95,18 +95,16 @@ export default function TiltCard() {
               <span>
                 &nbsp;&nbsp;<span className="tilt-prop">skills</span>
                 <span className="tilt-op">: [</span>
-                <span className="tilt-str2">'NextJS'</span>
+                <span className="tilt-str2">'React'</span>
                 <span className="tilt-op">, </span>
-                <span className="tilt-str2">'GSAP'</span>
-                <span className="tilt-op">, </span>
-                <span className="tilt-str2">'AI'</span>
+                <span className="tilt-str2">'ExpressJS'</span>
                 <span className="tilt-op">],</span>
               </span>
             </div>
             <div className="tilt-line">
               <span className="tilt-ln">05</span>
               <span>
-                &nbsp;&nbsp;<span className="tilt-prop">passionate</span>
+                &nbsp;&nbsp;<span className="tilt-prop">qualified</span>
                 <span className="tilt-op">: </span>
                 <span className="tilt-bool">true</span>
                 <span className="tilt-op">,</span>
@@ -117,7 +115,7 @@ export default function TiltCard() {
               <span>
                 &nbsp;&nbsp;<span className="tilt-prop">motto</span>
                 <span className="tilt-op">: </span>
-                <span className="tilt-str">"Build with Purpose"</span>
+                <span className="tilt-str">'Design. Develop. Deliver.'</span>
               </span>
             </div>
             <div className="tilt-line">
