@@ -14,7 +14,7 @@ function Hero() {
     }
 
     return (
-        <div className='main-heading container'>
+        <div className='main-heading'>
             <TiltCard />
             <div>
                 <div className='main-heading-text fade-in-right'>
