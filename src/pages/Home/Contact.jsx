@@ -16,7 +16,7 @@ function Contact(){
     });
 
     return(
-        <div className="contact-container">
+        <div className="contact-container container">
             <p>{t.contactText}</p>
             <input 
                 className="contact-input"

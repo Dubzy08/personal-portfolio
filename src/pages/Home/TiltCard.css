@@ -10,7 +10,7 @@
 
 .tilt-card {
     position: relative;
-    width: 520px;
+    width: min(90dvw, 520px);
     background: #141414;
     border-radius: 12px;
     border: 1px solid rgba(51, 146, 187, 0.15);
