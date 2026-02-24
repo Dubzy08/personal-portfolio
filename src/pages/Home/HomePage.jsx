@@ -19,8 +19,8 @@ function Home() {
     return (
         <div className='app-container'>
             <ParticleBackground />
-            <div className='content'>
-                <NavigationBar className='nav-bar' />
+            <NavigationBar className='nav-bar' />
+            <div className='content container'>
                 <section id='home'>
                     <div className='welcome-screen'>
                         <Hero />
@@ -32,7 +32,7 @@ function Home() {
                 </section>
                 <section id='skills' className='section-block skills'>
                     <h1 className='section-heading'>{t.skills}</h1>
-                    <div className='container'>
+                    <div>
                         <SkillCard title='PYTHON' filename={SkillIcons.python} />
                         <SkillCard title='JAVASCRIPT' filename={SkillIcons.javascript} />
                         <SkillCard title='C++' filename={SkillIcons.cpp} />
@@ -49,7 +49,7 @@ function Home() {
                 <section id='projects' className='section-block projects'>
                     <h1 className='section-heading'>{t.projects}</h1>
                     <p>{t.projectPar}</p>
-                    <div className='project-card-container container'>
+                    <div className='project-card-container'>
                         {Projects.slice(0, 3).map((project) => (
                             <ProjectCard key={project.id} {...project} />
                         ))}
