@@ -150,6 +150,6 @@ section{
 .project-card-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 12px;
+    gap: 32px;
     align-items: stretch;
 }

@@ -1,9 +1,5 @@
 @import './index.css';
 
-.contact-container{
-    width: 600px;
-}
-
 .contact-input{
     background: rgb(44, 44, 44);
     box-sizing: border-box;
