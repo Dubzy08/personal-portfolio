@@ -11,6 +11,12 @@ import postgresql from './postgresql.png';
 import mongodb from './mongodb.png';
 import nodejs from './nodejs.png';
 import nextjs from './nextjs.png';
+import electron from './electron.png';
+import qgis from './qgis.png';
+import socketio from './socketio.png';
+import vite from './vite.png';
+import aws from './aws.png';
+import lambda from './lambda.png';
 
 export const Skills = [
     {title: 'PYTHON', filename: python},
@@ -18,6 +24,7 @@ export const Skills = [
     {title: 'C++', filename: cpp},
     {title: 'REACT', filename: react},
     {title: 'HTML', filename: html},
+    {title: 'AWS', filename: aws},
     {title: 'C#', filename: csharp},
     {title: 'GIT', filename: git},
     {title: 'CSS', filename: css},
@@ -26,4 +33,9 @@ export const Skills = [
     {title: 'MONGODB', filename: mongodb},
     {title: 'NODEJS', filename: nodejs},
     {title: 'NEXTJS', filename: nextjs},
+    {title: 'ELECTRON', filename: electron},
+    {title: 'QGIS', filename: qgis},
+    {title: 'SOCKETIO', filename: socketio},
+    {title: 'VITE', filename: vite},  
+    {title: 'LABMDA', filename: lambda},  
 ]

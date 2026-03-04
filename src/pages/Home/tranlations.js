@@ -16,7 +16,7 @@ export const translations = {
         aboutDesc: 'I am a Bachelor of Electrical Engineering who has spent the last several years developing his skills of software development. While my foundation is in engineering principles, my passion lies in building high-performance, interactive full-stack applications. I thrive in fast-paced environments that challenge me to grow, staying "on my toes" by constantly adopting new technologies. When I\'m not at my desk, you\'ll find me on the field playing team sports, practicing guitar, or exploring a good book.',
         skillsDesc: "From designing intuitive user interfaces in React to architecting complex data relations in PSQL, I utilize a diverse set of modern languages and tools to bring digital solutions to life.",
         contactText: "Have any questions or want to get to know me better? Let's talk!",
-        projectPar: "A selection of high-impact digital solutions, built with focus on scalability, performance, and user experience.",
+        projectPar: "A selection of high-impact digital and embedded solutions, built with focus on scalability, performance, and user experience.",
     },
     fr: {
         home: "Accueil",

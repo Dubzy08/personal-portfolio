@@ -1,10 +1,9 @@
 import { useTranslation } from './LanguageContext';
 import { useState, useEffect } from 'react';
 import './ProjectCard.css';
-import { jaJP } from '@mui/material/locale';
 
 function ProjectCard(props){
-    const { t } = useTranslation();
+    const { language } = useTranslation();
 
     const [ count, setCount ] = useState(5);
     const [ skills, setSkills ] = useState([]);
@@ -42,7 +41,7 @@ function ProjectCard(props){
                         {props.title}
                     </div>
                     <div className='project-desc'>
-                        {props.desc[t] || props.desc.en}
+                        {props.desc[language] || props.desc.en}
                     </div>
                     <div className='project-skills'>
                         {skills.map((skill, index) => (
@@ -54,7 +53,7 @@ function ProjectCard(props){
                     </div>
                 </div>
                 <div className='project-links'>
-                    <a className='live-demo' href={props.demoLink ? props.demoLink : '#' }>
+                    <a className={`live-demo ${!props.demoLink ? 'disabled' : ''}`} href={props.demoLink}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <circle cx="12" cy="12" r="10"></circle>
                             <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>

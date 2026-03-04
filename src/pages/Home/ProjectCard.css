@@ -57,6 +57,14 @@
 .project-card .project-desc{
     font-size: 16px;
     text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: normal;
+    overflow-wrap: normal;
+    cursor: default;
+    transition: all 0.3s ease;
 }
 
 .project-card .project-skills{
@@ -115,7 +123,7 @@
     transition: all 0.5s ease;
 }
 
-.project-links .source-code.disabled {
+.project-links .disabled {
     opacity: 0.4;
     cursor: not-allowed;
     pointer-events: none;
