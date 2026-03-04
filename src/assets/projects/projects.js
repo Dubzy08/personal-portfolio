@@ -23,9 +23,9 @@ export const Projects = [
             en:'A real-time messaging application built with React for a fast, responsive user interface and MongoDB for scalable, reliable message storage. It features a clean component-based architecture and persistent chat history for seamless communication.',
             fr:'Une application de messagerie en temps réel développée avec React pour une interface rapide et réactive, et MongoDB pour un stockage des messages fiable et évolutif. Elle offre une architecture modulaire et un historique de conversations persistant pour une communication fluide.',
         },
-        skills:['React.js', 'MongoDB', 'Express.js', 'RESTful', 'Socket.io', 'Routing', 'Authentication', 'UI Desing', 'Security', 'JWT', 'Hashing', ],
-        demoLink:'',
-        codeLink:'',
+        skills:['React.js', 'MongoDB', 'Express.js', 'RESTful', 'Socket.io', 'AWS', 'Routing', 'Authentication', 'UI Desing', 'Security', 'JWT', 'Hashing', ],
+        demoLink:'https://main.d3gl6ac13rrn25.amplifyapp.com/',
+        codeLink:'https://github.com/Dubzy08/weMessage',
     },
     {
         id:3,
@@ -37,7 +37,7 @@ export const Projects = [
         },
         skills:['C#', 'C++', 'MVVM', 'Management', 'System Archictecture', 'Pathfinding', 'Performance Optimization', 'Git', 'PID Controllers', 'Team Management', 'Event Driven Programming', 'Embedded Systems'],
         demoLink:'',
-        codeLink:'',
+        codeLink:'https://github.com/Dubzy08/techmice',
     },
 ]
     
